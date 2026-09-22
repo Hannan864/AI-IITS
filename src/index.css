@@ -1,0 +1,584 @@
+@import "tailwindcss";
+
+/* Base Typography & Antialiasing */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================================
+   1. DEFAULT LIGHT THEME (Islamic University Green & White Aesthetic)
+      - Background: Crisp Pure White (#ffffff / #f8fafc)
+      - Sidebar, Topbar, Main Cards, Sections, Divs, Tags: Rich Islamic Emerald Green (#064e3b / #047857)
+      - Texts & Metric Numbers: Bold, high contrast (#ffffff / #ecfdf5 / #a7f3d0)
+      - Alert Notifications: Clear, prominent, highly visible indicators
+   ========================================================================= */
+html.light,
+body.light,
+[data-theme="light"] {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+html.light ::selection,
+[data-theme="light"] ::selection {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+/* Glassy Custom Scrollbars - Light Mode */
+html.light ::-webkit-scrollbar-track,
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+html.light ::-webkit-scrollbar-thumb,
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #059669;
+  border-radius: 8px;
+}
+html.light ::-webkit-scrollbar-thumb:hover,
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #047857;
+}
+
+/* ==================== 1A. MAIN APP WORKSPACE BACKGROUND (WHITE) ==================== */
+html.light .app-layout-root,
+[data-theme="light"] .app-layout-root {
+  background-color: #ffffff !important;
+  background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.05) 0%, rgba(255, 255, 255, 1) 75%) !important;
+  color: #0f172a !important;
+}
+
+html.light .content-scroll-area,
+[data-theme="light"] .content-scroll-area {
+  background-color: #ffffff !important;
+}
+
+html.light #login-screen-root,
+[data-theme="light"] #login-screen-root {
+  background-color: #ffffff !important;
+  background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(16, 185, 129, 0.12), rgba(255, 255, 255, 1)) !important;
+  color: #0f172a !important;
+}
+
+/* ==================== 1B. SIDEBAR (ISLAMIC EMERALD GREEN) ==================== */
+html.light .sidebar-container,
+html.light aside,
+[data-theme="light"] .sidebar-container,
+[data-theme="light"] aside {
+  background-color: #064e3b !important; /* Deep University Emerald Green */
+  border-color: #047857 !important;
+  color: #ffffff !important;
+  box-shadow: 4px 0 20px -3px rgba(6, 78, 59, 0.15) !important;
+}
+
+html.light aside .text-slate-100,
+html.light aside .text-slate-200,
+html.light aside .text-slate-300,
+html.light aside .text-slate-400,
+[data-theme="light"] aside .text-slate-100,
+[data-theme="light"] aside .text-slate-200,
+[data-theme="light"] aside .text-slate-300,
+[data-theme="light"] aside .text-slate-400 {
+  color: #f1f5f9 !important;
+}
+
+html.light aside .text-slate-500,
+html.light aside .text-slate-600,
+[data-theme="light"] aside .text-slate-500,
+[data-theme="light"] aside .text-slate-600 {
+  color: #a7f3d0 !important;
+  font-weight: 700 !important;
+}
+
+html.light aside nav button,
+[data-theme="light"] aside nav button {
+  color: #ecfdf5 !important;
+}
+
+html.light aside nav button:hover,
+[data-theme="light"] aside nav button:hover {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+}
+
+html.light aside .divider-border,
+[data-theme="light"] aside .divider-border {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* ==================== 1C. TOPBAR / HEADER (ISLAMIC GREEN & WHITE) ==================== */
+html.light .topbar-header,
+[data-theme="light"] .topbar-header {
+  background-color: #065f46 !important; /* Rich Islamic Green Header */
+  border-color: #047857 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px -2px rgba(6, 78, 59, 0.15) !important;
+}
+
+html.light .topbar-title,
+[data-theme="light"] .topbar-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+html.light .topbar-time-badge,
+[data-theme="light"] .topbar-time-badge {
+  background-color: #047857 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html.light .topbar-session-badge,
+[data-theme="light"] .topbar-session-badge {
+  background-color: #047857 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+html.light .topbar-session-name,
+[data-theme="light"] .topbar-session-name {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html.light .topbar-role-tag,
+[data-theme="light"] .topbar-role-tag {
+  background-color: #10b981 !important;
+  color: #064e3b !important;
+  font-weight: 900 !important;
+}
+
+html.light .topbar-icon-btn,
+[data-theme="light"] .topbar-icon-btn {
+  color: #ffffff !important;
+}
+html.light .topbar-icon-btn:hover,
+[data-theme="light"] .topbar-icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
+html.light .notifications-dropdown,
+[data-theme="light"] .notifications-dropdown {
+  background-color: #064e3b !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 28px -5px rgba(6, 78, 59, 0.4) !important;
+}
+
+html.light .notifications-dropdown-header,
+[data-theme="light"] .notifications-dropdown-header {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+html.light .notifications-dropdown-title,
+[data-theme="light"] .notifications-dropdown-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+html.light .notifications-count-badge,
+[data-theme="light"] .notifications-count-badge {
+  background-color: #10b981 !important;
+  color: #064e3b !important;
+  font-weight: 900 !important;
+}
+
+html.light .notif-item:hover,
+[data-theme="light"] .notif-item:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.light .notif-title,
+[data-theme="light"] .notif-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html.light .notif-msg,
+[data-theme="light"] .notif-msg {
+  color: #e2e8f0 !important;
+}
+
+html.light .notif-time,
+[data-theme="light"] .notif-time {
+  color: #a7f3d0 !important;
+  font-weight: 600 !important;
+}
+
+/* ==================== 1D. MAIN COMPONENTS, DIVS, CARDS, SECTIONS (ISLAMIC GREEN) ==================== */
+html.light .glass-card,
+html.light [class*="bg-[#090d1a]"],
+html.light [class*="bg-[#0b1227]"],
+html.light [class*="bg-[#0a0f1d]"],
+html.light [class*="bg-[#0c1222]"],
+html.light [class*="bg-[#0a1021]"],
+html.light [class*="bg-[#060814]"],
+html.light [class*="bg-slate-900"],
+html.light [class*="bg-slate-950"],
+html.light [class*="bg-white/\[0.03\]"],
+html.light [class*="bg-white/\[0.05\]"],
+html.light [class*="bg-white/5"],
+html.light [class*="bg-white/10"],
+[data-theme="light"] .glass-card,
+[data-theme="light"] [class*="bg-[#090d1a]"],
+[data-theme="light"] [class*="bg-[#0b1227]"],
+[data-theme="light"] [class*="bg-[#0a0f1d]"],
+[data-theme="light"] [class*="bg-[#0c1222]"],
+[data-theme="light"] [class*="bg-[#0a1021]"],
+[data-theme="light"] [class*="bg-[#060814]"],
+[data-theme="light"] [class*="bg-slate-900"],
+[data-theme="light"] [class*="bg-slate-950"],
+[data-theme="light"] [class*="bg-white/\[0.03\]"],
+[data-theme="light"] [class*="bg-white/\[0.05\]"],
+[data-theme="light"] [class*="bg-white/5"],
+[data-theme="light"] [class*="bg-white/10"] {
+  background-color: #064e3b !important; /* Rich Islamic Green components */
+  border-color: #059669 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px -3px rgba(6, 78, 59, 0.16) !important;
+}
+
+/* Secondary nested sub-cards, pill tracks, and inner component containers */
+html.light [class*="bg-[#0f1936]"],
+html.light [class*="bg-[#111625]"],
+html.light [class*="bg-[#1a233d]"],
+html.light [class*="bg-[#0c1630]"],
+html.light [class*="bg-slate-950/50"],
+html.light [class*="bg-slate-950/60"],
+html.light [class*="bg-slate-950/30"],
+html.light [class*="bg-black/20"],
+html.light [class*="bg-black/30"],
+[data-theme="light"] [class*="bg-[#0f1936]"],
+[data-theme="light"] [class*="bg-[#111625]"],
+[data-theme="light"] [class*="bg-[#1a233d]"],
+[data-theme="light"] [class*="bg-[#0c1630]"],
+[data-theme="light"] [class*="bg-slate-950/50"],
+[data-theme="light"] [class*="bg-slate-950/60"],
+[data-theme="light"] [class*="bg-slate-950/30"],
+[data-theme="light"] [class*="bg-black/20"],
+[data-theme="light"] [class*="bg-black/30"] {
+  background-color: #047857 !important; /* Secondary darker green for depth */
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* ==================== 1E. PROMINENT TEXT & LABELS IN LIGHT THEME ==================== */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* KPI numbers and metrics */
+html.light .glass-card h3,
+html.light .glass-card h2,
+[data-theme="light"] .glass-card h3,
+[data-theme="light"] .glass-card h2 {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Metric uppercase labels (Total Hardware, Issued Units, etc.) */
+html.light .glass-card span[class*="text-slate-500"],
+html.light .glass-card span[class*="text-slate-400"],
+[data-theme="light"] .glass-card span[class*="text-slate-500"],
+[data-theme="light"] .glass-card span[class*="text-slate-400"] {
+  color: #a7f3d0 !important; /* Bright mint green label */
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200,
+[data-theme="light"] .text-slate-100,
+[data-theme="light"] .text-slate-200 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+html.light .text-slate-300,
+[data-theme="light"] .text-slate-300 {
+  color: #f1f5f9 !important;
+}
+
+html.light .text-slate-400,
+[data-theme="light"] .text-slate-400 {
+  color: #a7f3d0 !important;
+}
+
+html.light .text-slate-500,
+[data-theme="light"] .text-slate-500 {
+  color: #6ee7b7 !important;
+  font-weight: 700 !important;
+}
+
+/* ==================== 1F. PROMINENT ALERTS & NOTIFICATIONS ==================== */
+/* High Risk / Critical Alerts */
+html.light .bg-red-500\/20,
+html.light .bg-rose-500\/20,
+html.light .bg-rose-950\/40,
+[data-theme="light"] .bg-red-500\/20,
+[data-theme="light"] .bg-rose-500\/20,
+[data-theme="light"] .bg-rose-950\/40 {
+  background-color: #dc2626 !important; /* Bold vivid Red */
+  border-color: #ef4444 !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+html.light .text-red-300,
+html.light .text-red-400,
+html.light .text-rose-300,
+html.light .text-rose-400,
+[data-theme="light"] .text-red-300,
+[data-theme="light"] .text-red-400,
+[data-theme="light"] .text-rose-300,
+[data-theme="light"] .text-rose-400 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Warning / Medium Risk Alerts */
+html.light .bg-amber-500\/20,
+html.light .bg-amber-500\/15,
+html.light .bg-amber-950\/40,
+[data-theme="light"] .bg-amber-500\/20,
+[data-theme="light"] .bg-amber-500\/15,
+[data-theme="light"] .bg-amber-950\/40 {
+  background-color: #f59e0b !important; /* Bold vivid Amber */
+  border-color: #fbbf24 !important;
+  color: #0f172a !important;
+  font-weight: 900 !important;
+}
+
+html.light .text-amber-300,
+html.light .text-amber-400,
+[data-theme="light"] .text-amber-300,
+[data-theme="light"] .text-amber-400 {
+  color: #fde68a !important;
+  font-weight: 800 !important;
+}
+
+/* Success / Safe Status */
+html.light .bg-emerald-500\/20,
+html.light .bg-emerald-550\/10,
+[data-theme="light"] .bg-emerald-500\/20,
+[data-theme="light"] .bg-emerald-550\/10 {
+  background-color: #10b981 !important;
+  border-color: #34d399 !important;
+  color: #064e3b !important;
+  font-weight: 900 !important;
+}
+
+html.light .text-emerald-400,
+[data-theme="light"] .text-emerald-400 {
+  color: #a7f3d0 !important;
+  font-weight: 800 !important;
+}
+
+/* ==================== 1G. TAGS, BADGES, AND ACCENTS ==================== */
+html.light .bg-indigo-600,
+html.light .bg-indigo-650,
+[data-theme="light"] .bg-indigo-600,
+[data-theme="light"] .bg-indigo-650 {
+  background-color: #10b981 !important;
+  color: #064e3b !important;
+  font-weight: 900 !important;
+}
+
+html.light .bg-indigo-600:hover,
+html.light .bg-indigo-650:hover,
+[data-theme="light"] .bg-indigo-600:hover,
+[data-theme="light"] .bg-indigo-650:hover {
+  background-color: #34d399 !important;
+}
+
+html.light [class*="border-white/5"],
+html.light [class*="border-white/10"],
+html.light [class*="border-white/15"],
+html.light [class*="border-white/20"],
+[data-theme="light"] [class*="border-white/5"],
+[data-theme="light"] [class*="border-white/10"],
+[data-theme="light"] [class*="border-white/15"],
+[data-theme="light"] [class*="border-white/20"] {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ==================== 1H. TABLES (GREEN THEME) ==================== */
+html.light table,
+[data-theme="light"] table {
+  background-color: #064e3b !important;
+  color: #ffffff !important;
+}
+
+html.light thead th,
+[data-theme="light"] thead th {
+  background-color: #047857 !important;
+  color: #ffffff !important;
+  border-color: #10b981 !important;
+  font-weight: 900 !important;
+}
+
+html.light tbody td,
+[data-theme="light"] tbody td {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+}
+
+html.light tbody tr:hover,
+[data-theme="light"] tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ==================== 1I. INPUTS & FORMS (GREEN INTEGRATED) ==================== */
+html.light input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+html.light textarea,
+html.light select,
+[data-theme="light"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: #047857 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html.light input:focus,
+html.light textarea:focus,
+html.light select:focus,
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  border-color: #34d399 !important;
+  box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.35) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder,
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #a7f3d0 !important;
+}
+
+html.light option,
+[data-theme="light"] option {
+  background-color: #064e3b !important;
+  color: #ffffff !important;
+}
+
+/* ==================== 1J. LOGIN SCREEN CARD (ISLAMIC GREEN) ==================== */
+html.light .login-card,
+[data-theme="light"] .login-card {
+  background-color: #064e3b !important;
+  border-color: #059669 !important;
+  box-shadow: 0 25px 50px -12px rgba(6, 78, 59, 0.4) !important;
+  color: #ffffff !important;
+}
+
+html.light .login-brand-header,
+[data-theme="light"] .login-brand-header {
+  background-color: #047857 !important;
+  border-color: #10b981 !important;
+}
+
+html.light .login-brand-icon,
+[data-theme="light"] .login-brand-icon {
+  background-color: #065f46 !important;
+  border-color: #10b981 !important;
+  color: #34d399 !important;
+}
+
+html.light .login-title,
+[data-theme="light"] .login-title {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+html.light .login-subtitle,
+[data-theme="light"] .login-subtitle {
+  color: #a7f3d0 !important;
+  font-weight: 700 !important;
+}
+
+html.light .login-tabs-rail,
+[data-theme="light"] .login-tabs-rail {
+  background-color: #034b37 !important;
+  border-color: #047857 !important;
+}
+
+/* Footer in Light Mode */
+html.light .app-footer,
+[data-theme="light"] .app-footer {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #064e3b !important;
+  font-weight: 800 !important;
+}
+
+/* Modal Backdrops in Light Mode */
+html.light .fixed.inset-0.bg-slate-950\/80,
+html.light .fixed.inset-0.bg-\[\#020512\]\/85,
+html.light .fixed.inset-0.bg-\[\#060814\]\/98,
+html.light .fixed.inset-0.bg-\[\#020617\]\/80,
+[data-theme="light"] .fixed.inset-0.bg-slate-950\/80,
+[data-theme="light"] .fixed.inset-0.bg-\[\#020512\]\/85,
+[data-theme="light"] .fixed.inset-0.bg-\[\#060814\]\/98,
+[data-theme="light"] .fixed.inset-0.bg-\[\#020617\]\/80 {
+  background-color: rgba(6, 78, 59, 0.5) !important;
+}
+
+
+/* =========================================================================
+   2. DARK THEME (Original High-Tech Dark Indigo/Slate)
+   ========================================================================= */
+html.dark,
+body.dark,
+[data-theme="dark"] {
+  background-color: #020617;
+  color: #f1f5f9;
+}
+
+html.dark ::-webkit-scrollbar-track,
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+html.dark ::-webkit-scrollbar-thumb,
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover,
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+html.dark option,
+[data-theme="dark"] option {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder,
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
