@@ -1,0 +1,6 @@
+{
+  "name": "Automated Issuance and Inventory Tracking System",
+  "description": "Centralized university asset management platform (AIITS) for tracking assets, issuance, returns, NDC requests, and smart recovery predictions.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
