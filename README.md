@@ -265,21 +265,21 @@ npm run start
 
 ---
 
-## SECTION 9: Interviewer Cheat Sheet (How to Discuss This Project)
+## SECTION 9: QNA (About This Project)
 
-***"What was the most complex architectural challenge you faced in this project, and how did you resolve it?"***
+***"What was the most complex architectural challenge i faced in this project, and how did i resolve it?"***
 > "The primary challenge was preventing race conditions and stale liability states between the warehouse inventory dispatch desk and the faculty NDC clearance portal. If a store manager reclaims a laptop while an administrator is simultaneously reviewing the faculty member's clearance, an un-synchronized database could permit a false clearance or lock a faculty member unfairly. I resolved this by enforcing ACID transaction blocks inside `better-sqlite3` and piping every state change through an immediate Socket.IO event bus that broadcasts updates to all active role views in under 15ms."
 
 ***"How does the AI component add genuine business value rather than acting as a gimmick?"***
 > "In academic universities, millions of rupees are lost because recovery notices sent to departing faculty are either generic, sent too late, or legally ineffective. I implemented Google Gemini with context-injection: our backend dynamically extracts the faculty member's exact contract conclusion date, calculated risk tier, and itemized equipment serial numbers. Gemini then synthesizes an authoritative, polite, and legally compliant institutional demand letter that store managers can export and serve immediately, cutting recovery cycles from weeks to minutes."
 
-***"Why did you choose SQLite over an external database like PostgreSQL or MongoDB?"***
+***"Why did i choose SQLite over an external database like PostgreSQL or MongoDB?"***
 > "For an on-premise institutional deployment like a university campus store, minimizing infrastructure complexity, cold-start latency, and external network dependency is critical. By using `better-sqlite3` in Write-Ahead Logging (WAL) mode, I achieved synchronous query execution speeds with zero network roundtrip latency while retaining full ACID transactional integrity. The database resides in a structured, portable file that can be backed up atomically without requiring dedicated database administrator overhead."
 
-***"How did you approach security and role boundaries across the system?"***
+***"How did i approach security and role boundaries across the system?"***
 > "I built defense-in-depth at both the network and transport layers. Every password is encrypted using `bcryptjs` with salt rounds, sessions are signed with stateless HMAC-SHA256 JWTs, and every privileged REST route passes through a role verification middleware that cross-references identity claims before executing controller logic. On the transport level, Helmet injects HTTP hardening headers to block frame hijacking, XSS, and sniff attacks, and all SQL queries use strict parameterized bindings to eliminate SQL injection entirely."
 
-***"How does your frontend architecture maintain performance during real-time updates?"***
+***"How does my frontend architecture maintain performance during real-time updates?"***
 > "Instead of triggering heavy global component re-renders, the frontend isolates real-time socket events to targeted state reducers. Heavy operations like camera-based QR barcode parsing run on hardware-accelerated streams via dedicated modal portals that unmount immediately after capture to release GPU and memory resources. Furthermore, the UI leverages Tailwind CSS v4's compiled stylesheet architecture to eliminate CSS runtime parsing overhead."
 
 ---
@@ -287,12 +287,10 @@ npm run start
 ## SECTION 10: Contact & Hire Me
 
 I am actively seeking full-time roles in **Full-Stack Software Engineering**, **Backend Systems Engineering**, **AI Engineering**, and **Cybersecurity / IT Infrastructure**.
-
 - **Name:** Abdul Hannan
-- **Email:** [1234hannan1@gmail.com](mailto:1234hannan1@gmail.com)
-- **LinkedIn:** [linkedin.com/in/[Your-LinkedIn]](https://linkedin.com/in/)
-- **GitHub:** [github.com/[Your-GitHub]](https://github.com/)
-- **Portfolio:** [Your-Portfolio-URL](https://)
+- **Email:** [iamhannanshahid@gmail.com](mailto:iamhannanshahid@gmail.com)
+- **GitHub:** [github.com/Hannan864](https://github.com/Hannan864)
+- **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
 
 *Open to on-site, hybrid, and remote opportunities worldwide.*
 
